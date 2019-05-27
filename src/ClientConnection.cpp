@@ -29,6 +29,7 @@
 #include <sys/stat.h> 
 #include <iostream>
 #include <dirent.h>
+#include <unistd.h>
 
 #include "common.h"
 
@@ -70,7 +71,7 @@ ClientConnection::~ClientConnection() {
 
 
 int connect_TCP( uint32_t address,  uint16_t  port) {
-     // Esta función deberá implementarla el alumno.
+     //TODO Esta función deberá implementarla el alumno.
 
     return -1; // Deberá devolver un descriptor de socket.
 
@@ -117,39 +118,40 @@ void ClientConnection::WaitForRequests() {
       if (COMMAND("USER")) {
 	    fscanf(fd, "%s", arg);
 	    fprintf(fd, "331 User name ok, need password\n");
+        //TODO crear cueta
       }
       else if (COMMAND("PWD")) {
-	   
+	   //TODO pwd
       }
       else if (COMMAND("PASS")) {
-	   
+	   //TODO PASS
       }
       else if (COMMAND("PORT")) {
-	  
+	  //TODO PORT
       }
       else if (COMMAND("PASV")) {
-	  
+	  //TODO PASV
       }
       else if (COMMAND("CWD")) {
-	   
+	   //TODO CWD
       }
       else if (COMMAND("STOR") ) {
-	    
+	    //TODO STOR
       }
       else if (COMMAND("SYST")) {
-	   
+	   //TODO SYST
       }
       else if (COMMAND("TYPE")) {
-	  
+	    //TODO TYPE
       }
       else if (COMMAND("RETR")) {
-	   
+	    //TODO RETR
       }
       else if (COMMAND("QUIT")) {
-	 
+	    //TODO QUIT
       }
       else if (COMMAND("LIST")) {
-	
+	    //TODO LIST
       }
       else  {
 	    fprintf(fd, "502 Command not implemented.\n"); fflush(fd);

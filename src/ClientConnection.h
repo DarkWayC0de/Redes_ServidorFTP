@@ -31,7 +31,7 @@ private:
     
     int data_socket;         // Descriptor de socket para la conexion de datos;
     int control_socket;      // Descriptor de socket para al conexión de control;
-    
+
     bool parar;
 };
 
