@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
     action.sa_flags = SA_SIGINFO;
       sigaction(SIGINT, &action , NULL);
     server = new FTPServer(2121);
-    std::cout<<"USER: user\nPASS:user\n"
+
       atexit(exit_handler);
     server->run();
 

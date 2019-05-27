@@ -39,10 +39,7 @@ int define_socket_TCP(int port) {
      return -1;
    }
 
-   if(connect(s,(struct sockaddr *)&sin,sizeof(sin))<0){
-     errexit("Fallo al establecer conecion con %s:%i\t%s\n",inet_ntoa(sin.sin_addr),sin.sin_port,strerror(errno));
-     return -1;
-   }
+
    memset(&sin, 0, sizeof(sin));
    sin.sin_family=AF_INET;
    sin.sin_addr.s_addr=INADDR_ANY;
