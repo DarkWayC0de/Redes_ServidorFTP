@@ -18,9 +18,6 @@ void exit_handler() {
 
 
 int main(int argc, char **argv) {
-
-  
-  
     struct sigaction action;
     action.sa_sigaction = sighandler;
     action.sa_flags = SA_SIGINFO;

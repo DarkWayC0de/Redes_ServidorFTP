@@ -33,6 +33,20 @@ private:
     int control_socket;      // Descriptor de socket para al conexión de control;
 
     bool parar;
+    bool pasivo;
+    void user(void);
+    void list(void);
+    void pwd(void);
+    void pass(void);
+    void cwd(void);
+    void stor(void);
+    void type(void);
+    void retr(void);
+    void syst(void);
+    void quit(void);
+    void port(void);
+    void pasv(void);
+
 };
 
 #endif

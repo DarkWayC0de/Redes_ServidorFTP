@@ -91,7 +91,7 @@ void FTPServer::run() {
     socklen_t alen;
     msock = define_socket_TCP(port);
     while (1) {
-	pthread_t thread;
+	  pthread_t thread;
         ssock = accept(msock, (struct sockaddr *)&fsin, &alen);
         if(ssock < 0)
             errexit("Fallo en el accept: %s\n", strerror(errno));
@@ -100,7 +100,7 @@ void FTPServer::run() {
 	
 	// Aquí se crea un hilo para que se puedan ejecutar varias
 	// peticiones simultáneamente.
-	pthread_create(&thread, NULL, run_client_connection, (void*)connection);
+	  pthread_create(&thread, NULL, run_client_connection, (void*)connection);
        std::cout<<"Peticion entrante: "<<inet_ntoa(fsin.sin_addr)<<":"<<fsin.sin_port<<"\n";
     }
 
